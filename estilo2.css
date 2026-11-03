@@ -1,0 +1,733 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f3;
+    color: #222;
+}
+
+
+/*  ENCABEZADO */
+
+header {
+    background: linear-gradient(135deg, #006b45, #003d29);
+    color: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.logo h1 {
+    font-size: 22px;
+    font-family: "Manufacturing Consent", system-ui;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a8d5ba;
+}
+
+.hero {
+    min-height: 600px;
+    background:
+        linear-gradient(
+            rgba(0, 60, 40, 0.75),
+            rgba(0, 30, 20, 0.8)
+        ),
+        url("imagenes/s1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+/* PORTADA*/
+
+
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h2 {
+    font-size: 65px;
+    font-family: "Manufacturing Consent", system-ui;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 22px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: white;
+    color: #006b45;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #dceee4;
+}
+
+
+/*  SECCIONES*/
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+
+    color: #006b45;
+
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #667;
+    font-size: 18px;
+}
+
+
+/* HISTORIA*/
+
+.historia {
+    background: white;
+}
+
+.historia-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.historia-text h3 {
+    font-size: 30px;
+
+    color: #006b45;
+
+    margin-bottom: 20px;
+}
+
+.historia-text p {
+    line-height: 1.8;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+/*  DATOS*/
+.dato-box {
+    background:
+        linear-gradient(rgba(0, 61, 41, 0.1), rgba(0, 30, 20, 0.9)),
+        url("imagenes/Aficion.jpg");
+        background-size: cover;
+        background-position: center;
+
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+}
+
+.dato-box h3 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+.dato {
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.3
+    );
+}
+
+.dato:last-child {
+    border-bottom: none;
+}
+
+.dato strong {
+    font-size: 20px;
+}
+
+
+/* IDENTIDAD */
+
+.guerreros {
+    background: #eef3ef;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.12 );
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-top {
+    background: linear-gradient(
+        135deg,
+        #006b45,
+        #003d29
+    );
+
+    color: white;
+
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.card:hover .card-top img {
+    transform: scale(1.08);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-family: "Manufacturing Consent", system-ui;
+
+    color: #006b45;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    line-height: 1.6;
+
+    color: #555;
+}
+
+
+/* LEYENDAS*/
+
+
+.leyendas {
+    background: white;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.legend-card {
+    background: #f5f7f5;
+    border-left: 6px solid #006b45;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.legend-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.legend-card h3 {
+    color: #07361a;
+    font-size: 25px;
+    margin-bottom: 10px;
+    /* Aplicamos la fuente gótica aquí */
+    font-family: "Manufacturing Consent";
+    font-weight: 400;
+}
+
+.legend-card span {
+    display: inline-block;
+    background: #006b45;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.legend-card p {
+    line-height: 1.6;
+}
+
+.borgetti {
+    border-color: #006b45;
+    background:
+    url("imagenes/jb2.jpg");
+    color: white;
+
+}
+
+.sanchez {
+    border-color: #006b45;
+    background:
+    url("imagenes/OS.jpg");
+    color: black;
+}
+
+.ruiz {
+    border-color: #006b45;
+    background:
+    url("imagenes/PR.jpg");
+    color: white;
+}
+
+.peralta {
+    border-color: #006b45;
+    background:
+    url("imagenes/o6p.jpg");
+    color: black;
+}
+
+/*  ESTADIO*/
+
+.estadio {
+    background: 
+    URL("imagenes/e7.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.estadio .section-title h2 {
+    font-family: "Manufacturing Consent", system-ui;
+    color: white;
+    font-size: 60px;
+}
+
+.estadio .section-title p {
+    color: white;
+}
+
+.stadium-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.stadium-box {
+    background: rgba(
+        255,
+        255,
+        255,
+        0.1
+    );
+
+    padding: 30px;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.2
+    );
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.stadium-box h3 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+/*  REGISTRO*/
+
+.registro {
+    background: #eef3ef;
+}
+
+.form-container {
+    max-width: 800px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(
+        0,
+        0,
+        0,
+        0.15
+    );
+}
+
+.form-container h3 {
+    text-align: center;
+
+    color: #006b45;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #d5ddd8;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #006b45;
+
+    box-shadow: 0 0 0 3px rgba(
+        0,
+        107,
+        69,
+        0.1
+    );
+}
+
+textarea {
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+.submit-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #006b45,
+        #003d29
+    );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(
+        0,
+        0,
+        0,
+        0.2
+    );
+}
+
+
+/* FOOTER*/
+
+footer {
+    background: #00291c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #bcd0c5;
+
+    margin: 8px;
+}
+
+/* PANEL ADMIN */
+
+.panel {
+    background: #eef3ef;
+}
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.resumen-box {
+    background: linear-gradient(135deg, #006b45, #003d29);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.resumen-box h3 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.tabla-titulo {
+    color: #006b45;
+    font-size: 26px;
+    margin: 35px 0 15px;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-scroll table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-scroll th {
+    background: #006b45;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    white-space: nowrap;
+}
+
+.tabla-scroll td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e3e9e5;
+}
+
+.tabla-scroll tr:hover td {
+    background: #f4f8f5;
+}
+
+.tabla-scroll a {
+    color: #006b45;
+    font-weight: bold;
+}
+
+.mini {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* LOGIN */
+
+.error {
+    background: #fde8e8;
+    color: #b00020;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.enlace-registro {
+    margin: 25px 0 0;
+}
+
+.enlace-registro a {
+    color: #006b45;
+    font-weight: bold;
+}
+
+
+/*  RESPONSIVO */
+
+@media (max-width: 900px) {
+    .resumen
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .historia-container,
+    .cards,
+    .legend-grid,
+    .stadium-info {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
+

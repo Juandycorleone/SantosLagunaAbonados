@@ -1,0 +1,41 @@
+/* CATALOGO */
+
+.catalogo {
+    background: #eef3ef;
+    min-height: 80vh;
+}
+
+.card-content .precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #006b45;
+    margin-top: 12px;
+}
+
+.card-content .stock {
+    margin: 8px 0 15px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #006b45, #003d29);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover {
+    transform: scale(1.05);
+}
+
+.agotado {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ccc;
+    color: #555;
+    border-radius: 30px;
+    font-weight: bold;
+}
